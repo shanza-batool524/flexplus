@@ -571,13 +571,14 @@ class _ChannelsState extends ResumableState<Channels> {
                   left: 0,
                   right: 0,
                   duration: Duration(milliseconds: 200),
-                  height: isMobile && context.isLandscape
-                      ? (MediaQuery.of(context).size.height / 4.5) + 25
-                      : context.isPortrait
-                          ? (MediaQuery.of(context).size.height / 2) + 20
-                          : (posty < 0)
-                              ? (MediaQuery.of(context).size.height / 2) + 20
-                              : (MediaQuery.of(context).size.height / 2) + 50,
+                  top: MediaQuery.of(context).size.height/1.6,
+                  // height: isMobile && context.isLandscape
+                  //     ? (MediaQuery.of(context).size.height / 4.5) + 25
+                  //     : context.isPortrait
+                  //         ? (MediaQuery.of(context).size.height / 2) + 20
+                  //         : (posty < 0)
+                  //             ? (MediaQuery.of(context).size.height / 2) + 20
+                  //             : (MediaQuery.of(context).size.height / 2) + 50,
                   child: Column(
                     children: [
                       Container(
@@ -926,6 +927,7 @@ class _ChannelsState extends ResumableState<Channels> {
                       ),
                       Expanded(
                         child: Container(
+
                           child: ScrollConfiguration(
                             behavior:
                                 MyBehavior(), // From this behaviour you can change the behaviour

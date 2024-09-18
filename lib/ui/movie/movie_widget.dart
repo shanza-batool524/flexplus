@@ -138,7 +138,7 @@ class MoviesMovieWidget extends StatelessWidget {
                     blurRadius: 5),
               ],
             ),
-            height: MediaQuery.of(context).size.height / 2.7,
+            height: MediaQuery.of(context).size.height / 3.1,
             width: MediaQuery.of(context).size.width / 9,
           ),
           Positioned(

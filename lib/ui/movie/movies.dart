@@ -1214,7 +1214,7 @@ class _MoviesState extends ResumableState<Movies> {
           Container(
             padding:
                 EdgeInsets.symmetric(horizontal: context.isPortrait ? 10 : 40),
-            height: 200,
+            height: MediaQuery.of(context).size.height / 3.1,
             width: double.infinity,
             child: ScrollablePositionedList.builder(
               itemCount: itemCount,
