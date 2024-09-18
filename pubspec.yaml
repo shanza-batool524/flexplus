@@ -1,0 +1,110 @@
+name: flutter_app_tv
+description: TvFlix
+
+publish_to: 'none'
+
+version: 1.2.0+3
+
+environment:
+  sdk: '>=3.3.3 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  scrollable_positioned_list: ^0.3.8
+  webview_flutter: ^4.7.0
+  flutter_rating_bar: ^4.0.1
+  smooth_page_indicator: ^1.1.0
+  universal_io: ^2.0.4
+  carousel_slider_plus:
+#  carousel_slider:
+#    git:
+#      url: https://github.com/sampaio96/flutter_carousel_slider.git
+#      ref: master
+
+  
+  http: ^1.2.1
+  url_launcher: ^6.2.6
+  font_awesome_flutter: ^10.7.0
+  cached_network_image: ^3.3.1
+  animated_text_kit: ^4.2.2
+  flutter_html: ^3.0.0-beta.2
+  shared_preferences: ^2.2.3
+  firebase_core: ^2.31.0
+  google_sign_in: ^6.2.1
+  firebase_auth: ^4.19.5
+  flutter_facebook_auth: ^6.2.0
+  fluttertoast: ^8.2.5
+  need_resume: ^1.0.7+1
+  flutter_launcher_icons: ^0.13.1
+  wakelock_plus: ^1.2.5
+  flutter_math_fork: ^0.7.2
+  provider: ^6.1.2
+  transparent_image: ^2.0.1
+  # chewie: ^1.8.1
+  video_player: ^2.8.6
+  # pod_player: ^0.2.2
+
+  cupertino_icons: ^1.0.0
+  # subtitle_wrapper_package: ^2.2.1
+    # git:
+    #   url: https://github.com/Ahtsham0715/flutter_subtitle_wrapper.git
+    #   ref: main
+  flutter_vlc_player: ^7.4.2
+    # path: flutter_vlc_player/flutter_vlc_player
+    # git:
+    #   url: https://github.com/Ahtsham0715/flutter_vlc_player/tree/master/flutter_vlc_player.git
+    #   ref: master
+  youtube_player_flutter: ^9.0.1
+  device_info_plus: any
+  # flick_video_player: ^0.8.0
+  # visibility_detector: any
+  # media_kit_video: any
+  # media_kit: any
+  # media_kit_libs_video: any
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  build_runner: ^2.4.9
+  change_app_package_name: ^1.0.0
+  flutter_launcher_icons: "^0.13.1"
+
+flutter_launcher_icons:
+  #  image_path: "assets/images/icon-128x128.png"
+  image_path_android: "assets/tvappflix_mobile.png"
+  image_path_ios: "assets/tvappflix_mobile.png"
+  android: true # can specify file name here e.g. "ic_launcher"
+  ios: true # can specify file name here e.g. "My-Launcher-Icon"
+  adaptive_icon_background: "assets/tvappflix_mobile.png" # only available for Android 8.0 devices and above
+  adaptive_icon_foreground: "assets/tvappflix_mobile.png" # only available for Android 8.0 devices and above
+  adaptive_icon_monochrome: "assets/tvappflix_mobile.png" # only available for Android 13 devices and above
+  min_sdk_android: 21 # android min sdk min:16, default 21
+  remove_alpha_ios: true
+  background_color_ios: "#ffffff"
+  # web:
+  #   generate: true
+  #   image_path: "assets/images/icon-1024x1024.png"
+  #   background_color: "#hexcode"
+  #   theme_color: "#hexcode"
+  # windows:
+  #   generate: true
+  #   image_path: "assets/images/icon-1024x1024.png"
+  #   icon_size: 48 # min:48, max:256, default: 48
+  # macos:
+  #   generate: true
+  #   image_path: "assets/images/icon-1024x1024.png"
+
+flutter:
+
+ 
+  uses-material-design: true
+  assets:
+    - assets/
+    - assets/images/
+ 
+  fonts:
+    - family: Oduda
+      fonts:
+        - asset: assets/fonts/Oduda.otf
+  
