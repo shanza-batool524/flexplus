@@ -135,46 +135,20 @@ class _SplashState extends State<Splash> with TickerProviderStateMixin {
     return "done";
   }
 
-  redirect() async {
-    if (can_redirect) {
-      if (kIsWeb) {
-        print('Web>>>>>>>>>>>');
-        // Redirect for web
-        Navigator.pushReplacement(
-          context,
-          PageRouteBuilder(
-            pageBuilder: (context, animation1, animation2) => HomeMobile(),
-            transitionDuration: Duration(seconds: 0),
-          ),
-        );
-      } else if (Platform.isIOS || await context.isMobile) {
-        // Redirect for iOS or Mobile
-        Navigator.pushReplacement(
-          context,
-          PageRouteBuilder(
-            pageBuilder: (context, animation1, animation2) => HomeMobile(),
-            transitionDuration: Duration(seconds: 0),
-          ),
-        );
-      } else {
-        // Redirect for other platforms
-        Navigator.pushReplacement(
-          context,
-          PageRouteBuilder(
-            pageBuilder: (context, animation1, animation2) => Home(),
-            transitionDuration: Duration(seconds: 0),
-          ),
-        );
-      }
-    } else {
-      can_redirect = true;
-    }
-  }
-
   // redirect() async {
   //   if (can_redirect) {
-  //     // print(sysFeatures.contains('android.hardware.type.television'));
-  //     if (await context.isMobile || Platform.isIOS) {
+  //     if (kIsWeb) {
+  //       print('Web>>>>>>>>>>>');
+  //       // Redirect for web
+  //       Navigator.pushReplacement(
+  //         context,
+  //         PageRouteBuilder(
+  //           pageBuilder: (context, animation1, animation2) => HomeMobile(),
+  //           transitionDuration: Duration(seconds: 0),
+  //         ),
+  //       );
+  //     } else if (Platform.isIOS || await context.isMobile) {
+  //       // Redirect for iOS or Mobile
   //       Navigator.pushReplacement(
   //         context,
   //         PageRouteBuilder(
@@ -183,6 +157,7 @@ class _SplashState extends State<Splash> with TickerProviderStateMixin {
   //         ),
   //       );
   //     } else {
+  //       // Redirect for other platforms
   //       Navigator.pushReplacement(
   //         context,
   //         PageRouteBuilder(
@@ -195,6 +170,31 @@ class _SplashState extends State<Splash> with TickerProviderStateMixin {
   //     can_redirect = true;
   //   }
   // }
+
+  redirect() async {
+    if (can_redirect) {
+      // print(sysFeatures.contains('android.hardware.type.television'));
+      if (await context.isMobile || Platform.isIOS) {
+        Navigator.pushReplacement(
+          context,
+          PageRouteBuilder(
+            pageBuilder: (context, animation1, animation2) => HomeMobile(),
+            transitionDuration: Duration(seconds: 0),
+          ),
+        );
+      } else {
+        Navigator.pushReplacement(
+          context,
+          PageRouteBuilder(
+            pageBuilder: (context, animation1, animation2) => Home(),
+            transitionDuration: Duration(seconds: 0),
+          ),
+        );
+      }
+    } else {
+      can_redirect = true;
+    }
+  }
 
   logout() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();

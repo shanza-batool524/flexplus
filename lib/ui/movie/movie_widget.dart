@@ -22,7 +22,8 @@ class MovieWidget extends StatelessWidget {
                 ),
                 borderRadius: BorderRadius.circular(5)),
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(7),
+              shape: BoxShape.circle,
+              // borderRadius: BorderRadius.circular(7),
               color: Colors.blueGrey,
               border: (isFocus!)
                   ? Border.all(color: Colors.purple, width: 2)
@@ -36,8 +37,8 @@ class MovieWidget extends StatelessWidget {
                     blurRadius: 5),
               ],
             ),
-            height: 170,
-            width: 100,
+            // height: 170,
+            // width: 100,
           ),
           Positioned(
             top: 10,

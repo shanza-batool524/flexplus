@@ -84,7 +84,7 @@ class _HomeState extends ResumableState<Home> {
     return SafeArea(
       top: isMobile,
       child: Scaffold(
-        backgroundColor: Colors.grey,
+        backgroundColor: Colors.black,
         body: KeyboardListener(
           focusNode: home_focus_node,
           onKeyEvent: (KeyEvent event) {
@@ -235,7 +235,6 @@ class _HomeState extends ResumableState<Home> {
                 right: 0,
                 top: 0,
                 left: MediaQuery.of(context).size.width / 4,
-                bottom: MediaQuery.of(context).size.height / 4,
                 child: AnimatedSwitcher(
                   child: getBackgroundImage(),
                   duration: Duration(seconds: 1),
@@ -774,9 +773,11 @@ class _HomeState extends ResumableState<Home> {
     if (posty < 0 && slides.length > 0)
       return CachedNetworkImage(
           imageUrl: slides[side_current].image,
-          fit: BoxFit.cover,
+          fit: BoxFit.contain,
           width: MediaQuery.of(context).size.width,
-          height: MediaQuery.of(context).size.height,
+          // height: MediaQuery.of(context).size.height,
+
+          // height: 600,
           fadeInDuration: Duration(seconds: 1));
     if (posty == 0 && channels.length > 0)
       return CachedNetworkImage(

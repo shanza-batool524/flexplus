@@ -55,15 +55,23 @@ class _ChannelsWidgetState extends State<ChannelsWidget> {
                         : 50,
                 bottom: 5),
             height: 25,
-            child: Text(
-              widget.title,
-              style: TextStyle(
-                  color: (widget.jndex == widget.posty)
-                      ? Colors.white
-                      : Colors.white60,
-                  fontSize: widget.size,
-                  fontWeight: FontWeight.w900),
-            ),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children:[
+                Text(
+                widget.title,
+                style: TextStyle(
+                    color: (widget.jndex == widget.posty)
+                        ? Colors.white
+                        :Color(0xff2676a9),
+                    fontSize: widget.size,
+                    fontWeight: FontWeight.w900),
+              ),
+            Padding(
+                padding: EdgeInsets.only(right: 15),
+                child: Icon(Icons.grid_on,color: Color(0xff2676a9),)),
+
+              ],),
           ),
           Container(
             height: 75,
